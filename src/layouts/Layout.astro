@@ -14,35 +14,30 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astrologia</title>
 	</head>
-	<body>
-		<header>
-			<div>
-				<Icon name="simple-icons--saturn" />
+	<body class="bg-[#01050f] text-white">
+
+		<header class="flex justify-between items-center py-6 px-4">
+			<div class="flex gap-2 items-center">
+				<Icon name="simple-icons--saturn" size={24} />
 
 
-				<p>celestial</p>
+				<p class="text-lg font-semibold">CELESTIAL</p>
 			</div>
+			
 
-			<div>
-				<div>
-					<a href="">inio</a>
+			<div class="flex gap-7">
+				<div class="flex gap-4 text-gray-200">
+					<a href="">inicio</a>
 					<a href="">datos</a>
 					<a href="">zodiac</a>
 				</div>
 
-				<button>consult</button>
 			</div>
-
-			<slot />
+			
+			<button class="bg-blue-50 text-2xl px-8 py-0.5 text-blue-900 font-bold rounded-4xl">consult</button>
 		</header>
-	</body>
 
-	<style>
-		html,
-		body {
-			margin: 0;
-			width: 100%;
-			height: 100%;
-		}
-	</style>
+
+		<slot />
+	</body>
 </html>
