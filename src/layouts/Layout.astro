@@ -1,7 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 import "../styles/global.css";
-
 ---
 
 <!doctype html>
@@ -14,29 +13,27 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astrologia</title>
 	</head>
-	<body class="bg-[#01050f] text-white">
-
+	<body class="bg-[#05183c] text-white">
 		<header class="flex justify-between items-center py-6 px-4">
 			<div class="flex gap-2 items-center">
 				<Icon name="simple-icons--saturn" size={24} />
 
-
-				<p class="text-lg font-semibold">CELESTIAL</p>
+				<p class="text-4xl font-semibold">CELESTIAL</p>
 			</div>
-			
 
-			<div class="flex gap-7">
+			<div class="flex gap-3.5">
 				<div class="flex gap-4 text-gray-200">
-					<a href="">inicio</a>
-					<a href="">datos</a>
-					<a href="">zodiac</a>
+					<a class="text-3xl" href="">inicio</a>
+					<a class="text-3xl" href="">datos</a>
+					<a class="text-3xl">zodiac</a>
 				</div>
-
 			</div>
-			
-			<button class="bg-blue-50 text-2xl px-8 py-0.5 text-blue-900 font-bold rounded-4xl">consult</button>
-		</header>
 
+			<div class="flex px-0.5 py-1 flex gap-7">
+				<Icon name="lupa" size={25} />
+				<Icon name="mdi--user" size={25} />
+			</div>
+		</header>
 
 		<slot />
 	</body>
