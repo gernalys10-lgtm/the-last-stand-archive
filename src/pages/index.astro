@@ -1,4 +1,6 @@
 ---
+import Boton from "../components/Boton.astro";
+import Tarjeta from "../components/Tarjeta.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -7,87 +9,162 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<section class="flex justify-center items-center">
-		<div>
-			<p class="font-semibold text-[#ffff] text-5xl">THE FATE OF YOUR STARTS REVEALED </p>
+	<section class="flex justify-center items-center px-12 gap-12">
+		<div class="flex flex-col gap-5 max-w-xl">
+			<p class="text-[#ffff] text-7xl font-serif">
+				The fate of your <span class="text-amber-400 italic">stars</span
+				> revealed
+			</p>
 			<p class="flex gap-64 text-gray-300 text-lg">
 				Explora el plano cósmico de tu alma. Perspectivas seleccionadas
 				sobre los movimientos de los cuerpos celestes y su profunda
 				influencia en tu viaje terrestre
-			</p> 
+			</p>
 
-			<button class="font-bold bg-amber-500 text-blue-950 px-1.5 py-2 gap-4 rounded-b-none">GET STARTED</button>
+			<button
+				class="font-bold bg-amber-500 text-blue-950 px-2 py-1 rounded"
+				>GET STARTED</button
+			>
+			>
 		</div>
 
-		<img class=" shadow-blue-500 rounded-s-full rounded-se-full rounded-bl-full roundedfull rounded-e-full"  src="/La constelación de Libra, la balanza de la Justicia - WeMystic.jpg" alt="descripcion" />
+		<img
+			class="shadow-blue-500 rounded-full w-xl"
+			src="/La constelación de Libra, la balanza de la Justicia - WeMystic.jpg"
+			alt="descripcion"
+		/>
 	</section>
 
-	<section class="flex justify-items-center-safe">
+	<section class="flex-1 justify-items-center-safe">
 		<div>
-			<img  src="/Your weekly horoscope_ The Winter Solstice and Great Conjunction mark a pivotal time for us all.jpg" alt="" />
+			<Tarjeta
+				imagenes="public/astrologia/Your weekly horoscope_ The Winter Solstice and Great Conjunction mark a pivotal time for us all.jpg"
+			/>
+			<img
+				src="/Your weekly horoscope_ The Winter Solstice and Great Conjunction mark a pivotal time for us all.jpg"
+				alt=""
+				width={300}
+				height="200
+			"
+			/>
 		</div>
-		<div class=" justify-between">
-			<p class="font-bold text-3xl">Predicciones</p>
-			<p>Explora como los transitos planetarios influyen en tu energia
-				diaria.</p>
-
-			<button class="font-bold bg-amber-50 text-blue-900 px-1.5 py-2 rounded-4xl">Explorar</button>
-
+		<div class="flex">
+			<Tarjeta title="leer" imagenes="/descarga.jpg" subtitulos="efqwer" />
+			<Tarjeta title="leer" imagenes="/descarga.jpg" subtitulos="sdfasd" />
+			<Tarjeta title="leer" imagenes="/descarga.jpg" subtitulos="dsfasdf" />
 		</div>
 	</section>
 
-	<section class="flex gap-1">
+	<section class="flex-5">
+		<Tarjeta subtitulo="/" />
 		<div>
-			<p class="font-bold">Mapa natal</p>
-			<p>Descubre como la posicion de los planeta pueden servir como brujula
-			de navegacio</p>
+			<p class="font-bold text-3xl">Mapa natal</p>
+			<p>
+				Descubre como la posicion de los planeta pueden servir como
+				brujula de navegacio
+			</p>
 		</div>
 
-		<button  class="font-bold bg-amber-50 text-blue-900 px-1.5 py-2">Explorar</button>
+		<Boton text="hfjfjhgjhgj" />
 	</section>
 
 	<div>
-		<img src="/descarga.jpg" alt="cartanatal" class="shadow-amber-400" />
+		<img
+			src="/descarga.jpg"
+			alt="cartanatal"
+			class="shadow-amber-400"
+			width="300"
+			height="200"
+		/>
+
+		<imagen></imagen>
 	</div>
-	<section class="flex">
-		<div>
-			<img src="/descarga (1).jpg" alt="sinastria" />
+	<section class="flex gap-4">
+		<div class="flex gap-4">
+			<img
+				src="/descarga (1).jpg"
+				alt="sinastria"
+				width="300"
+				height="200"
+			/>
 		</div>
 		<div>
-			<p class="font-bold">Sinastria</p>
-			<p>Comprende como tu carta natal interactua con los demas, tus
-				fortalezas y relaciones Karmicas</p>
-			<button class="font-bold bg-amber-50 text-blue-900"> Explorar </button>
-		</div>
-	</section>
-	
-	<section class="flex">
-		<div>
-			<p class="font-bold">Ciclos Lunares</p>
-			<p>Conoce las proximas lunas nuevas y conoce la energia de cada fase</p>
-	
-			<button class="font-bold bg-amber-50 text-blue-900 px-1.5 py-2"> Explorar</button>
-		</div>
-		<div>
-			<img src="/descarga (2).jpg" alt="faseslunares" />
+			<p class="font-bold text-3xl">Sinastria</p>
+			<p>
+				Comprende como tu carta natal interactua con los demas, tus
+				fortalezas y relaciones Karmicas
+			</p>
+			<Boton text=" bts" />
 		</div>
 	</section>
-	
+
+	<section class="flex gap-2">
+		<div>
+			<p class="font-bold text-3xl">Ciclos Lunares</p>
+			<p>
+				Conoce las proximas lunas nuevas y conoce la energia de cada
+				fase
+			</p>
+
+			<Boton text="inf" />
+		</div>
+		<div>
+			<img
+				src="/descarga (2).jpg"
+				alt="faseslunares"
+				width="300"
+				height="200
+			"
+			/>
+		</div>
+	</section>
+
 	<section class="flex-1">
 		<div>
-			<img src="/Feng Shui Bagua Térkép.jpg" alt="idk">
+			<img
+				src="/Feng Shui Bagua Térkép.jpg"
+				alt="idk"
+				width="300"
+				height="200"
+			/>
 		</div>
 		<div>
-			<p class="font-bold">Paletas de sincronia con dus vibes</p>
-			<p>Seccion de tonos diseñados para armonizar tu espacio y elevar tu
-				frecuencia</p>
+			<p class="font-bold text-3xl">Paletas de sincronia con dus vibes</p>
+			<p>
+				Seccion de tonos diseñados para armonizar tu espacio y elevar tu
+				frecuencia
+			</p>
 		</div>
-	
-		<div><img src="/descarga (4).jpg" alt="tonos" /></div>
-	
-		<div><img src="/water lily pond _ color palette.jpg" alt="primavera" /></div>
-		<div><img src="/colour palette  ♡  O22.jpg" alt="red" /></div>
-		<div><img src="/colour palette  ♡  O32.jpg" alt="beige" /></div>
+
+		<div>
+			<img src="/descarga (4).jpg" alt="tonos" width="300" height="200
+			" />
+		</div>
+
+		<div>
+			<img
+				src="/water lily pond _ color palette.jpg"
+				alt="primavera"
+				width={300}
+				height="200"
+				"
+			/>
+		</div>
+		<div>
+			<img
+				src="/colour palette  ♡  O22.jpg"
+				alt="red"
+				width="300"
+				height={200}
+			/>
+		</div>
+		<div>
+			<img
+				src="/colour palette  ♡  O32.jpg"
+				alt="beige"
+				width="300"
+				height="200"
+			/>
+		</div>
 	</section>
 </Layout>
-
