@@ -4,7 +4,13 @@ const imagenes = Astro.props.imagenes
 const subtitulos = Astro.props.subtitulos
 ---
 <div>
-    <img src={imagenes} alt=""width={300} height="200" >
-    <p>{title}</p>
-    <p class="font-bold text-3xl">Predicciones {subtitulos}</p>
+    <div class="w-full h-90">
+        <img class="w-full h-full object-cover" src={imagenes} alt=""width={300} height="200" >
+
+    </div>
+    <div class="px-4">
+        <p class="uppercase tracking-wide text-gray">{title}</p>
+        <p class="font-bold text-3xl">Predicciones {subtitulos}</p>
+
+    </div>
 </div>

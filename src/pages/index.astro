@@ -1,15 +1,34 @@
 ---
 import Boton from "../components/Boton.astro";
+import Clasificacion from "../components/Clasificacion.astro";
 import Tarjeta from "../components/Tarjeta.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const tarjetas = [
+	{
+		title: "Carta Natal",
+		imagenes: "/descarga.jpg",
+		subtitulos: "Descubre tu mapa astral personalizado"
+	},
+	{
+		title: "Sinastria",
+		imagenes: "/descarga (1).jpg",
+		subtitulos: "Explora la compatibilidad entre cartas natales"
+	},
+	{
+		title: "Ciclos Lunares",
+		imagenes: "/descarga (2).jpg",
+		subtitulos: "Conoce las fases de la luna y su influencia"
+	}
+]
 ---
 
 <Layout>
-	<section class="flex justify-center items-center px-12 gap-12">
+
+	<section class="flex flex-col lg:flex-row justify-center items-center px-12 gap-12">
 		<div class="flex flex-col gap-5 max-w-xl">
 			<p class="text-[#ffff] text-7xl font-serif">
 				The fate of your <span class="text-amber-400 italic">stars</span
@@ -25,7 +44,7 @@ import Layout from "../layouts/Layout.astro";
 				class="font-bold bg-amber-500 text-blue-950 px-2 py-1 rounded"
 				>GET STARTED</button
 			>
-			>
+			
 		</div>
 
 		<img
@@ -36,135 +55,51 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 
 	<section class="flex-1 justify-items-center-safe">
-		<div>
-			<Tarjeta
-				imagenes="public/astrologia/Your weekly horoscope_ The Winter Solstice and Great Conjunction mark a pivotal time for us all.jpg"
-			/>
-			<img
-				src="/Your weekly horoscope_ The Winter Solstice and Great Conjunction mark a pivotal time for us all.jpg"
-				alt=""
-				width={300}
-				height="200
-			"
-			/>
-		</div>
-		<div class="flex">
-			<Tarjeta title="leer" imagenes="/descarga.jpg" subtitulos="efqwer" />
-			<Tarjeta title="leer" imagenes="/descarga.jpg" subtitulos="sdfasd" />
-			<Tarjeta title="leer" imagenes="/descarga.jpg" subtitulos="dsfasdf" />
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+			{ tarjetas.map(tarjeta => (
+				<Tarjeta
+					title={tarjeta.title}
+					imagenes={tarjeta.imagenes}
+					subtitulos={tarjeta.subtitulos}
+				/>
+			)) }
 		</div>
 	</section>
 
-	<section class="flex-5">
-		<Tarjeta subtitulo="/" />
+	<section>
 		<div>
-			<p class="font-bold text-3xl">Mapa natal</p>
-			<p>
-				Descubre como la posicion de los planeta pueden servir como
-				brujula de navegacio
-			</p>
+			<p class="font-serif text-4xl  text-center">Explore the  twelve house of destiny</p>
+			
 		</div>
 
-		<Boton text="hfjfjhgjhgj" />
-	</section>
-
-	<div>
-		<img
-			src="/descarga.jpg"
-			alt="cartanatal"
-			class="shadow-amber-400"
-			width="300"
-			height="200"
-		/>
-
-		<imagen></imagen>
-	</div>
-	<section class="flex gap-4">
-		<div class="flex gap-4">
-			<img
-				src="/descarga (1).jpg"
-				alt="sinastria"
-				width="300"
-				height="200"
+		<div class="grid grid-cols-8">
+			<Clasificacion 
+				logo="lupa"
+				nombre="Lorem"
 			/>
-		</div>
-		<div>
-			<p class="font-bold text-3xl">Sinastria</p>
-			<p>
-				Comprende como tu carta natal interactua con los demas, tus
-				fortalezas y relaciones Karmicas
-			</p>
-			<Boton text=" bts" />
-		</div>
-	</section>
-
-	<section class="flex gap-2">
-		<div>
-			<p class="font-bold text-3xl">Ciclos Lunares</p>
-			<p>
-				Conoce las proximas lunas nuevas y conoce la energia de cada
-				fase
-			</p>
-
-			<Boton text="inf" />
-		</div>
-		<div>
-			<img
-				src="/descarga (2).jpg"
-				alt="faseslunares"
-				width="300"
-				height="200
-			"
+			<Clasificacion 
+				logo="lupa"
+				nombre="ipsum"
 			/>
-		</div>
-	</section>
-
-	<section class="flex-1">
-		<div>
-			<img
-				src="/Feng Shui Bagua Térkép.jpg"
-				alt="idk"
-				width="300"
-				height="200"
+			<Clasificacion 
+				logo="lupa"
+				nombre="Liss"
 			/>
-		</div>
-		<div>
-			<p class="font-bold text-3xl">Paletas de sincronia con dus vibes</p>
-			<p>
-				Seccion de tonos diseñados para armonizar tu espacio y elevar tu
-				frecuencia
-			</p>
+			<Clasificacion 
+				logo="lupa"
+				nombre="Intel"
+			/>
+			<Clasificacion 
+				logo="lupa"
+				nombre="Programacion"
+			/>
+			
 		</div>
 
-		<div>
-			<img src="/descarga (4).jpg" alt="tonos" width="300" height="200
-			" />
-		</div>
+	
+		
+	
 
-		<div>
-			<img
-				src="/water lily pond _ color palette.jpg"
-				alt="primavera"
-				width={300}
-				height="200"
-				
-			/>
-		</div>
-		<div>
-			<img
-				src="/colour palette  ♡  O22.jpg"
-				alt="red"
-				width="300"
-				height={200}
-			/>
-		</div>
-		<div>
-			<img
-				src="/colour palette  ♡  O32.jpg"
-				alt="beige"
-				width="300"
-				height="200"
-			/>
-		</div>
+	
 	</section>
 </Layout>

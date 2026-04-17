@@ -1,9 +1,33 @@
 ---
+
 import Layout from "../layouts/Layout.astro"
+
+const signos = [
+    { nombre: "Aries", fecha: "21 de marzo - 19 de abril" },
+    { nombre: "Tauro", fecha: "20 de abril - 20 de mayo" },
+    { nombre: "Géminis", fecha: "21 de mayo - 20 de junio" },
+    { nombre: "Cáncer", fecha: "21 de junio - 22 de julio" },
+    { nombre: "Leo", fecha: "23 de julio - 22 de agosto" },
+    { nombre: "Virgo", fecha: "23 de agosto - 22 de septiembre" },
+    { nombre: "Libra", fecha: "23 de septiembre - 22 de octubre" },
+    { nombre: "Escorpio", fecha: "23 de octubre - 21 de noviembre" },
+    { nombre: "Sagitario", fecha: "22 de noviembre - 21 de diciembre" },
+    { nombre: "Capricornio", fecha: "22 de diciembre - 19 de enero" },
+    { nombre: "Acuario", fecha: "20 de enero - 18 de febrero" },
+    { nombre: "Piscis", fecha: "19 de febrero - 20 de marzo" }
+]
+
 ---
 
 <Layout>
 
-
-    Breve introduccion antes de la clasificacion
+    {
+        signos.map(signo => (
+            <div class="bg-[#0a1c3d] p-4 rounded-lg mb-4">
+                <h2 class="text-xl font-semibold mb-2">{signo.nombre}</h2>
+                <p class="text-gray-400">{signo.fecha}</p>
+            </div>
+        ))
+    }
+    
 </Layout>
